@@ -7,6 +7,8 @@ import com.wilfred.inventoryservice.inventoryservice.service.InventoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/inventories")
 public class InventoryController {
@@ -26,8 +28,13 @@ public class InventoryController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public InventoryResponse addInventory(@RequestBody InventoryRequest inventoryRequest){
+    public InventoryResponse addInventory(@RequestBody InventoryRequest inventoryRequest) {
         return inventoryService.addInventory(inventoryRequest);
     }
 
+    @GetMapping("/list")
+    @ResponseStatus(HttpStatus.OK)
+    public List<InventoryResponse> getList() {
+        return inventoryService.getList();
+    }
 }

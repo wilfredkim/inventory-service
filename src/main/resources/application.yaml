@@ -2,18 +2,17 @@ spring:
   application:
     name: inventory-service
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/inventory_service
+    url: jdbc:mysql://localhost:33060/inventory_service
     username: root
     password: Adm!n123$
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: none
   flyway:
-    url: jdbc:mysql://localhost:3306/inventory_service
-    password: Adm!n123$
-    user: root
     baseline-on-migrate: true
+    url: jdbc:mysql://localhost:33060/inventory_service
+    user: root
+    password: Adm!n123$
 server:
   port: 1664
-

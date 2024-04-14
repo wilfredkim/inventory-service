@@ -7,6 +7,7 @@ Content-Type: application/json
 }
 
 ###
-G:ET http://localhost:1664/api/v1/inventories?skuCode=iPhone15&quantity=100
+GET http://localhost:1664/api/v1/inventories?skuCode=iPhone15&quantity=100
 
-
+###
+GET http://localhost:1664/api/v1/inventories/list
