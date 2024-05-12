@@ -34,7 +34,7 @@ public class InventoryService {
     }
 
     public List<InventoryResponse> getList() {
-        Optional<List<Inventory>> optionalInventories = Optional.ofNullable(inventoryRepository.findAll());
+        Optional<List<Inventory>> optionalInventories = Optional.of(inventoryRepository.findAll());
         return optionalInventories.map(inventories -> {
             if (!inventories.isEmpty()) {
                 return inventories.stream()

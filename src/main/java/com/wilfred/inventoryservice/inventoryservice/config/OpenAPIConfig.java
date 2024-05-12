@@ -15,12 +15,12 @@ public class OpenAPIConfig {
 
     public OpenAPI orderServiceConfig(){
         return new OpenAPI().
-                info(new Info().title("Order Service API")
-                        .description("This is the REST Endpoints for Order Service")
+                info(new Info().title("Inventory Service API")
+                        .description("This is the REST Endpoints for Inventory Service")
                         .version("v0.0.1")
                         .license(new License().name("Apache 2.0"))
                 ).externalDocs(new ExternalDocumentation()
-                        .description("You can refer to Online Order Service documentation")
+                        .description("You can refer to Online Inventory Service documentation")
                         .url("https://order-service-test-url/com/docs")
                 );
     }
